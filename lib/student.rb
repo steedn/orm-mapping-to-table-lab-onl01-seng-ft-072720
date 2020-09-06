@@ -16,7 +16,6 @@ class Student
     );
     TEMP
     DB[:conn].execute(sql)
-    # @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
  def self.drop_table
    sql = <<-TEMP
@@ -29,5 +28,6 @@ class Student
    INSERT INTO students (name, grade) VALUES (?, ?);
    TEMP
    DB[:conn].execute(sql, self.name, self.grade)
+   @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
  end
 end
