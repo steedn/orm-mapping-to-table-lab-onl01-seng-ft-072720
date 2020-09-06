@@ -26,7 +26,7 @@ class Student
  end
  def save
    sql=<<-TEMP
-   INSERT INTO students (names, grade) VALUES (?, ?);
+   INSERT INTO students (name, grade) VALUES (?, ?);
    TEMP
    DB[:conn].execute(sql, self.name, self.grade)
  end
