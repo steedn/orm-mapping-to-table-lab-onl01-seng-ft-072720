@@ -9,4 +9,5 @@ class Student
     sql = <<-TEMP
     CREATE TABLE IF NOT EXISTS
     TEMP
+  end
 end
