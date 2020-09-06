@@ -4,7 +4,7 @@ class Student
     @name = name
     @grade = grade
     @id = id
-    binding.pry
+    # binding.pry
   end
   def self.create_table
     sql = <<-TEMP
