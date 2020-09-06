@@ -18,5 +18,10 @@ class Student
     DB[:conn].execute(sql)
     # @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
-
+ def self.drop_table
+   sql = <<-TEMP
+   DROP TABLE students IF EXISTS
+   TEMP
+   DB[:conn].execute(sql)
+ end
 end
