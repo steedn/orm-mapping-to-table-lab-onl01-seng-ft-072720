@@ -29,4 +29,5 @@ class Student
    INSERT (names, grade) INTO students VALUES (?, ?)
    TEMP
    DB[:conn].execute(sql, self.name, self.grade)
+ end
 end
