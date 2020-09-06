@@ -5,7 +5,8 @@ class Student
     @grade = grade
     @id = id
   end
-  def self.create_table 
+  def self.create_table
     sql = <<-TEMP
     CREATE TABLE IF NOT EXISTS
+    TEMP
 end
